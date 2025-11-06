@@ -8,7 +8,7 @@
 ## 🚨 Incident Description
 A Google Cloud API key was accidentally exposed in the public GitHub repository.
 
-**Exposed Key:** `AIzaSyBzexnXOj4uAix3d2lZ8wZ57TRC5OaJKfs`  
+**Exposed Key:** `AIzaSy***[REDACTED]***JKfs` (key has been revoked)  
 **Project:** Gallery2025 (YOUR_PROJECT_ID)  
 **Repository:** https://github.com/Ronfo2013/ai-photo-gallery-2025  
 
