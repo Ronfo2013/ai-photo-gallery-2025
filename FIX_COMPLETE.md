@@ -91,10 +91,10 @@ npm run build
 # 2. Deploy su Cloud Run
 gcloud run deploy ai-photo-gallery \
   --source=. \
-  --project=gen-lang-client-0873479092 \
+  --project=YOUR_PROJECT_ID \
   --region=us-west1 \
   --allow-unauthenticated \
-  --set-env-vars="GEMINI_API_KEY=PLACEHOLDER_API_KEY,VITE_FIREBASE_API_KEY=AIzaSyBzexnXOj4uAix3d2lZ8wZ57TRC5OaJKfs,VITE_FIREBASE_AUTH_DOMAIN=gen-lang-client-0873479092.firebaseapp.com,VITE_FIREBASE_PROJECT_ID=gen-lang-client-0873479092,VITE_FIREBASE_STORAGE_BUCKET=gen-lang-client-0873479092.firebasestorage.app,VITE_FIREBASE_MESSAGING_SENDER_ID=595991638389,VITE_FIREBASE_APP_ID=1:595991638389:web:209c59e241883bf96f633c"
+  --set-env-vars="GEMINI_API_KEY=PLACEHOLDER_API_KEY,VITE_FIREBASE_API_KEY=YOUR_FIREBASE_API_KEY_HERE,VITE_FIREBASE_AUTH_DOMAIN=YOUR_PROJECT_ID.firebaseapp.com,VITE_FIREBASE_PROJECT_ID=YOUR_PROJECT_ID,VITE_FIREBASE_STORAGE_BUCKET=YOUR_PROJECT_ID.firebasestorage.app,VITE_FIREBASE_MESSAGING_SENDER_ID=YOUR_SENDER_ID,VITE_FIREBASE_APP_ID=1:YOUR_SENDER_ID:web:209c59e241883bf96f633c"
 ```
 
 ### **Opzione B: Build Locale e Verifica**
@@ -112,10 +112,10 @@ cat dist/index.html | grep "script.*src"
 # 3. Deploy
 gcloud run deploy ai-photo-gallery \
   --source=. \
-  --project=gen-lang-client-0873479092 \
+  --project=YOUR_PROJECT_ID \
   --region=us-west1 \
   --allow-unauthenticated \
-  --set-env-vars="GEMINI_API_KEY=PLACEHOLDER_API_KEY,VITE_FIREBASE_API_KEY=AIzaSyBzexnXOj4uAix3d2lZ8wZ57TRC5OaJKfs,VITE_FIREBASE_AUTH_DOMAIN=gen-lang-client-0873479092.firebaseapp.com,VITE_FIREBASE_PROJECT_ID=gen-lang-client-0873479092,VITE_FIREBASE_STORAGE_BUCKET=gen-lang-client-0873479092.firebasestorage.app,VITE_FIREBASE_MESSAGING_SENDER_ID=595991638389,VITE_FIREBASE_APP_ID=1:595991638389:web:209c59e241883bf96f633c"
+  --set-env-vars="GEMINI_API_KEY=PLACEHOLDER_API_KEY,VITE_FIREBASE_API_KEY=YOUR_FIREBASE_API_KEY_HERE,VITE_FIREBASE_AUTH_DOMAIN=YOUR_PROJECT_ID.firebaseapp.com,VITE_FIREBASE_PROJECT_ID=YOUR_PROJECT_ID,VITE_FIREBASE_STORAGE_BUCKET=YOUR_PROJECT_ID.firebasestorage.app,VITE_FIREBASE_MESSAGING_SENDER_ID=YOUR_SENDER_ID,VITE_FIREBASE_APP_ID=1:YOUR_SENDER_ID:web:209c59e241883bf96f633c"
 ```
 
 ---
@@ -125,14 +125,14 @@ gcloud run deploy ai-photo-gallery \
 ### **1. Configura Firebase Rules** (se non fatto già)
 
 Vai su:
-- https://console.firebase.google.com/project/gen-lang-client-0873479092/firestore/rules
-- https://console.firebase.google.com/project/gen-lang-client-0873479092/storage/rules
+- https://console.firebase.google.com/project/YOUR_PROJECT_ID/firestore/rules
+- https://console.firebase.google.com/project/YOUR_PROJECT_ID/storage/rules
 
 Usa le regole in `firestore.rules` e `storage.rules`
 
 ### **2. Configura AI Features (Opzionale)**
 
-1. Apri Admin Panel: https://ai-photo-gallery-595991638389.us-west1.run.app/admin
+1. Apri Admin Panel: https://ai-photo-gallery-YOUR_SENDER_ID.us-west1.run.app/admin
 2. Vai alla sezione "SEO & Tracking"
 3. Trova "AI Features (Gemini)"
 4. Spunta "Enable AI Features"

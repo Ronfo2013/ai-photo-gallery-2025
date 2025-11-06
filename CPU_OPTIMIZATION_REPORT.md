@@ -191,7 +191,7 @@ if (photosNeedingCheck.length === 0) {
 
 ## 🚀 **DEPLOY INFO**
 
-- **URL**: https://ai-photo-gallery-595991638389.us-west1.run.app
+- **URL**: https://ai-photo-gallery-YOUR_SENDER_ID.us-west1.run.app
 - **Revision**: `ai-photo-gallery-00017-lkf`
 - **Status**: ✅ **LIVE CON OTTIMIZZAZIONI CPU**
 

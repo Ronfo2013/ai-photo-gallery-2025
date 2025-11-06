@@ -3,7 +3,7 @@
 ## 🎯 Il Tuo Setup Attuale
 
 - **Frontend**: Google Cloud Run
-- **URL attuale**: `https://ai-photo-gallery-595991638389.us-west1.run.app`
+- **URL attuale**: `https://ai-photo-gallery-YOUR_SENDER_ID.us-west1.run.app`
 - **Database**: Firebase Firestore
 - **Storage**: Firebase Storage
 

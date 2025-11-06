@@ -4,7 +4,7 @@
 
 Gli URL di condivisione album usano sempre l'URL di Cloud Run invece del dominio personalizzato:
 ```
-❌ ATTUALE: https://ai-photo-gallery-595991638389.us-west1.run.app/#/album/123
+❌ ATTUALE: https://ai-photo-gallery-YOUR_SENDER_ID.us-west1.run.app/#/album/123
 ✅ DESIDERATO: https://gallery.opiumpordenone.com/#/album/123
 ```
 
@@ -14,7 +14,7 @@ Gli URL di condivisione album usano sempre l'URL di Cloud Run invece del dominio
 
 ### **STEP 1: Accedi all'Admin Panel**
 
-1. Vai su: https://ai-photo-gallery-595991638389.us-west1.run.app/#/admin
+1. Vai su: https://ai-photo-gallery-YOUR_SENDER_ID.us-west1.run.app/#/admin
 2. Fai login con le credenziali Firebase
 
 ---
@@ -88,7 +88,7 @@ if (import.meta.env.VITE_APP_URL) {
 }
 
 // 3. Fallback: URL di Cloud Run
-return 'https://ai-photo-gallery-595991638389.us-west1.run.app';
+return 'https://ai-photo-gallery-YOUR_SENDER_ID.us-west1.run.app';
 ```
 
 ### **File Coinvolti:**
@@ -151,7 +151,7 @@ gcloud beta run domain-mappings create \
 
 ### **Prima:**
 ```
-https://ai-photo-gallery-595991638389.us-west1.run.app/#/album/album-123
+https://ai-photo-gallery-YOUR_SENDER_ID.us-west1.run.app/#/album/album-123
 ```
 
 ### **Dopo:**

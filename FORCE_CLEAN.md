@@ -31,7 +31,7 @@ Ctrl + Shift + R
 
 ### **STEP 2: Cancella Cache Application**
 
-1. Apri l'app: https://ai-photo-gallery-595991638389.us-west1.run.app
+1. Apri l'app: https://ai-photo-gallery-YOUR_SENDER_ID.us-west1.run.app
 2. Premi **F12** (apri DevTools)
 3. Vai su tab **"Application"**
 4. A sinistra trova:
@@ -47,7 +47,7 @@ Ctrl + Shift + R
 
 **Opzione A - Cancella Collection Completa**:
 ```
-1. Apri: https://console.firebase.google.com/project/gen-lang-client-0873479092/firestore
+1. Apri: https://console.firebase.google.com/project/YOUR_PROJECT_ID/firestore
 2. Click sulla collection "gallery"
 3. In alto a destra: tre puntini (⋮) → "Delete collection"
 4. Digita "gallery" per confermare
@@ -56,7 +56,7 @@ Ctrl + Shift + R
 
 **Opzione B - Cancella Solo Document (se ancora esiste)**:
 ```
-1. Apri: https://console.firebase.google.com/project/gen-lang-client-0873479092/firestore/databases/-default-/data/~2Fgallery~2Fconfig
+1. Apri: https://console.firebase.google.com/project/YOUR_PROJECT_ID/firestore/databases/-default-/data/~2Fgallery~2Fconfig
 2. Se vedi il document "config" → Cancellalo di nuovo
 3. Click cestino 🗑️
 ```
@@ -71,7 +71,7 @@ Potrebbe essere che stai guardando un deploy vecchio. Verifichiamo:
 gcloud run revisions list \
   --service=ai-photo-gallery \
   --region=us-west1 \
-  --project=gen-lang-client-0873479092 \
+  --project=YOUR_PROJECT_ID \
   --limit=1
 ```
 
@@ -87,7 +87,7 @@ Dopo aver fatto tutti gli step:
 2. **Riapri il browser**
 3. **Apri l'app**:
    ```
-   https://ai-photo-gallery-595991638389.us-west1.run.app
+   https://ai-photo-gallery-YOUR_SENDER_ID.us-west1.run.app
    ```
 4. **Apri Console (F12) → Tab Network**
 5. **Filtra per "picsum"** → Dovrebbe essere **VUOTO**
@@ -143,10 +143,10 @@ npm run build
 # 4. Redeploy
 gcloud run deploy ai-photo-gallery \
   --source=. \
-  --project=gen-lang-client-0873479092 \
+  --project=YOUR_PROJECT_ID \
   --region=us-west1 \
   --allow-unauthenticated \
-  --set-env-vars="GEMINI_API_KEY=PLACEHOLDER_API_KEY,VITE_FIREBASE_API_KEY=AIzaSyBzexnXOj4uAix3d2lZ8wZ57TRC5OaJKfs,VITE_FIREBASE_AUTH_DOMAIN=gen-lang-client-0873479092.firebaseapp.com,VITE_FIREBASE_PROJECT_ID=gen-lang-client-0873479092,VITE_FIREBASE_STORAGE_BUCKET=gen-lang-client-0873479092.firebasestorage.app,VITE_FIREBASE_MESSAGING_SENDER_ID=595991638389,VITE_FIREBASE_APP_ID=1:595991638389:web:209c59e241883bf96f633c"
+  --set-env-vars="GEMINI_API_KEY=PLACEHOLDER_API_KEY,VITE_FIREBASE_API_KEY=YOUR_FIREBASE_API_KEY_HERE,VITE_FIREBASE_AUTH_DOMAIN=YOUR_PROJECT_ID.firebaseapp.com,VITE_FIREBASE_PROJECT_ID=YOUR_PROJECT_ID,VITE_FIREBASE_STORAGE_BUCKET=YOUR_PROJECT_ID.firebasestorage.app,VITE_FIREBASE_MESSAGING_SENDER_ID=YOUR_SENDER_ID,VITE_FIREBASE_APP_ID=1:YOUR_SENDER_ID:web:209c59e241883bf96f633c"
 ```
 
 Poi cancella Firestore e cache browser di nuovo.

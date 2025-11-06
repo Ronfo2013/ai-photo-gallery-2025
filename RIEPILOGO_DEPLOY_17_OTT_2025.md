@@ -117,7 +117,7 @@ gcloud run deploy ai-photo-gallery \
 ```
 
 ### **Dettagli Deploy:**
-- **Progetto GCP**: gen-lang-client-0873479092
+- **Progetto GCP**: YOUR_PROJECT_ID
 - **Regione**: us-west1
 - **Servizio**: ai-photo-gallery
 - **URL Attuale**: https://ai-photo-gallery-rr6csr6xrq-uw.a.run.app
@@ -131,7 +131,7 @@ gcloud run deploy ai-photo-gallery \
 
 **Passi veloci:**
 1. Console Firebase: https://console.firebase.google.com/
-2. Progetto: gen-lang-client-0873479092
+2. Progetto: YOUR_PROJECT_ID
 3. Authentication → Sign-in method → Abilita "Email/Password"
 4. Authentication → Users → Add user (crea admin)
 5. Testa login: https://[TUO-URL]/#/admin

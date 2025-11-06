@@ -8,7 +8,7 @@
 
 **AI Photo Gallery 2025** è un'applicazione web moderna e completa per la gestione di gallerie fotografiche professionali, potenziata dall'intelligenza artificiale di Google Gemini. Combina design elegante, performance ottimizzate e funzionalità avanzate per offrire un'esperienza utente superiore sia per amministratori che per visitatori.
 
-**🔗 Demo Live**: https://ai-photo-gallery-595991638389.us-west1.run.app
+**🔗 Demo Live**: https://ai-photo-gallery-YOUR_SENDER_ID.us-west1.run.app
 
 ---
 
@@ -324,8 +324,8 @@ Una soluzione completa, moderna e pronta per il futuro del web.
 ---
 
 **🔗 Links Utili:**
-- **Demo Live**: https://ai-photo-gallery-595991638389.us-west1.run.app
-- **Admin Panel**: https://ai-photo-gallery-595991638389.us-west1.run.app/#/admin
+- **Demo Live**: https://ai-photo-gallery-YOUR_SENDER_ID.us-west1.run.app
+- **Admin Panel**: https://ai-photo-gallery-YOUR_SENDER_ID.us-west1.run.app/#/admin
 - **GitHub Repository**: [Link al repository]
 - **Documentazione**: [FIREBASE_SETUP.md](./FIREBASE_SETUP.md)
 

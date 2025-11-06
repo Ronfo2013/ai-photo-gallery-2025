@@ -3,12 +3,12 @@ import { initializeApp } from 'firebase/app';
 import { getFirestore, doc, deleteDoc } from 'firebase/firestore';
 
 const firebaseConfig = {
-  apiKey: "AIzaSyBzexnXOj4uAix3d2lZ8wZ57TRC5OaJKfs",
-  authDomain: "gen-lang-client-0873479092.firebaseapp.com",
-  projectId: "gen-lang-client-0873479092",
-  storageBucket: "gen-lang-client-0873479092.firebasestorage.app",
-  messagingSenderId: "595991638389",
-  appId: "1:595991638389:web:209c59e241883bf96f633c"
+  apiKey: "YOUR_FIREBASE_API_KEY_HERE",
+  authDomain: "YOUR_PROJECT_ID.firebaseapp.com",
+  projectId: "YOUR_PROJECT_ID",
+  storageBucket: "YOUR_PROJECT_ID.firebasestorage.app",
+  messagingSenderId: "YOUR_SENDER_ID",
+  appId: "1:YOUR_SENDER_ID:web:209c59e241883bf96f633c"
 };
 
 const app = initializeApp(firebaseConfig);

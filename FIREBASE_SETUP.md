@@ -3,7 +3,7 @@
 ## Prerequisiti
 
 - Account Google Cloud/Firebase
-- Progetto Google Cloud: `gen-lang-client-0873479092`
+- Progetto Google Cloud: `YOUR_PROJECT_ID`
 
 ---
 
@@ -15,10 +15,10 @@ https://console.firebase.google.com/
 ```
 
 ### 1.2 Seleziona/Aggiungi il Progetto
-- Se il progetto `gen-lang-client-0873479092` non è ancora su Firebase:
+- Se il progetto `YOUR_PROJECT_ID` non è ancora su Firebase:
   - Click su "Aggiungi progetto"
   - Seleziona "Importa progetto Google Cloud"
-  - Scegli `gen-lang-client-0873479092`
+  - Scegli `YOUR_PROJECT_ID`
   
 - Se esiste già, selezionalo
 
@@ -37,7 +37,7 @@ https://console.firebase.google.com/
 3. Scegli le regole di sicurezza:
    - **Produzione**: Solo utenti autenticati
    - **Test**: Accesso aperto temporaneo
-4. Location: usa `us-west1` (già esistente: `ai-studio-bucket-595991638389-us-west1`)
+4. Location: usa `us-west1` (già esistente: `ai-studio-bucket-YOUR_SENDER_ID-us-west1`)
 5. Click **Done**
 
 ---
@@ -60,11 +60,11 @@ Vedrai qualcosa del tipo:
 ```javascript
 const firebaseConfig = {
   apiKey: "AIza....",
-  authDomain: "gen-lang-client-0873479092.firebaseapp.com",
-  projectId: "gen-lang-client-0873479092",
-  storageBucket: "ai-studio-bucket-595991638389-us-west1.appspot.com",
-  messagingSenderId: "595991638389",
-  appId: "1:595991638389:web:xxxxx"
+  authDomain: "YOUR_PROJECT_ID.firebaseapp.com",
+  projectId: "YOUR_PROJECT_ID",
+  storageBucket: "ai-studio-bucket-YOUR_SENDER_ID-us-west1.appspot.com",
+  messagingSenderId: "YOUR_SENDER_ID",
+  appId: "1:YOUR_SENDER_ID:web:xxxxx"
 };
 ```
 
@@ -83,11 +83,11 @@ Inserisci i valori da Firebase Console:
 GEMINI_API_KEY=tua-chiave-gemini
 
 VITE_FIREBASE_API_KEY=AIza....
-VITE_FIREBASE_AUTH_DOMAIN=gen-lang-client-0873479092.firebaseapp.com
-VITE_FIREBASE_PROJECT_ID=gen-lang-client-0873479092
-VITE_FIREBASE_STORAGE_BUCKET=gen-lang-client-0873479092.appspot.com
-VITE_FIREBASE_MESSAGING_SENDER_ID=595991638389
-VITE_FIREBASE_APP_ID=1:595991638389:web:xxxxx
+VITE_FIREBASE_AUTH_DOMAIN=YOUR_PROJECT_ID.firebaseapp.com
+VITE_FIREBASE_PROJECT_ID=YOUR_PROJECT_ID
+VITE_FIREBASE_STORAGE_BUCKET=YOUR_PROJECT_ID.appspot.com
+VITE_FIREBASE_MESSAGING_SENDER_ID=YOUR_SENDER_ID
+VITE_FIREBASE_APP_ID=1:YOUR_SENDER_ID:web:xxxxx
 ```
 
 ### 3.2 Configura le Regole Firestore
@@ -130,11 +130,11 @@ service firebase.storage {
 ```bash
 docker build \
   --build-arg VITE_FIREBASE_API_KEY="AIza...." \
-  --build-arg VITE_FIREBASE_AUTH_DOMAIN="gen-lang-client-0873479092.firebaseapp.com" \
-  --build-arg VITE_FIREBASE_PROJECT_ID="gen-lang-client-0873479092" \
-  --build-arg VITE_FIREBASE_STORAGE_BUCKET="gen-lang-client-0873479092.appspot.com" \
-  --build-arg VITE_FIREBASE_MESSAGING_SENDER_ID="595991638389" \
-  --build-arg VITE_FIREBASE_APP_ID="1:595991638389:web:xxxxx" \
+  --build-arg VITE_FIREBASE_AUTH_DOMAIN="YOUR_PROJECT_ID.firebaseapp.com" \
+  --build-arg VITE_FIREBASE_PROJECT_ID="YOUR_PROJECT_ID" \
+  --build-arg VITE_FIREBASE_STORAGE_BUCKET="YOUR_PROJECT_ID.appspot.com" \
+  --build-arg VITE_FIREBASE_MESSAGING_SENDER_ID="YOUR_SENDER_ID" \
+  --build-arg VITE_FIREBASE_APP_ID="1:YOUR_SENDER_ID:web:xxxxx" \
   -t gallery2025-firebase .
 ```
 
@@ -142,15 +142,15 @@ docker build \
 ```bash
 gcloud run deploy ai-photo-gallery \
   --source=. \
-  --project=gen-lang-client-0873479092 \
+  --project=YOUR_PROJECT_ID \
   --region=us-west1 \
   --set-env-vars="GEMINI_API_KEY=tua-chiave-gemini" \
   --set-env-vars="VITE_FIREBASE_API_KEY=AIza...." \
-  --set-env-vars="VITE_FIREBASE_AUTH_DOMAIN=gen-lang-client-0873479092.firebaseapp.com" \
-  --set-env-vars="VITE_FIREBASE_PROJECT_ID=gen-lang-client-0873479092" \
-  --set-env-vars="VITE_FIREBASE_STORAGE_BUCKET=gen-lang-client-0873479092.appspot.com" \
-  --set-env-vars="VITE_FIREBASE_MESSAGING_SENDER_ID=595991638389" \
-  --set-env-vars="VITE_FIREBASE_APP_ID=1:595991638389:web:xxxxx"
+  --set-env-vars="VITE_FIREBASE_AUTH_DOMAIN=YOUR_PROJECT_ID.firebaseapp.com" \
+  --set-env-vars="VITE_FIREBASE_PROJECT_ID=YOUR_PROJECT_ID" \
+  --set-env-vars="VITE_FIREBASE_STORAGE_BUCKET=YOUR_PROJECT_ID.appspot.com" \
+  --set-env-vars="VITE_FIREBASE_MESSAGING_SENDER_ID=YOUR_SENDER_ID" \
+  --set-env-vars="VITE_FIREBASE_APP_ID=1:YOUR_SENDER_ID:web:xxxxx"
 ```
 
 ---
@@ -172,7 +172,7 @@ Apri http://localhost:5173 e:
 ### 5.2 Test Produzione
 ```bash
 # Apri l'app deployata
-open https://ai-photo-gallery-595991638389.us-west1.run.app
+open https://ai-photo-gallery-YOUR_SENDER_ID.us-west1.run.app
 ```
 
 ### 5.3 Test Service Worker
@@ -233,7 +233,7 @@ Firebase Console → Storage → Usage
 
 ### Cloud Run Logs
 ```bash
-gcloud logging read "resource.type=cloud_run_revision AND resource.labels.service_name=ai-photo-gallery" --limit 50 --project=gen-lang-client-0873479092
+gcloud logging read "resource.type=cloud_run_revision AND resource.labels.service_name=ai-photo-gallery" --limit 50 --project=YOUR_PROJECT_ID
 ```
 
 ---

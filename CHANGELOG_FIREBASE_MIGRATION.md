@@ -130,8 +130,8 @@ export default defineConfig({
 ```env
 VITE_FIREBASE_API_KEY=...
 VITE_FIREBASE_AUTH_DOMAIN=...
-VITE_FIREBASE_PROJECT_ID=gen-lang-client-0873479092
-VITE_FIREBASE_STORAGE_BUCKET=ai-studio-bucket-595991638389-us-west1.appspot.com
+VITE_FIREBASE_PROJECT_ID=YOUR_PROJECT_ID
+VITE_FIREBASE_STORAGE_BUCKET=ai-studio-bucket-YOUR_SENDER_ID-us-west1.appspot.com
 VITE_FIREBASE_MESSAGING_SENDER_ID=...
 VITE_FIREBASE_APP_ID=...
 ```
@@ -281,7 +281,7 @@ Firestore Database
 ## 📦 Struttura Cloud Storage
 
 ```
-Cloud Storage Bucket: ai-studio-bucket-595991638389-us-west1
+Cloud Storage Bucket: ai-studio-bucket-YOUR_SENDER_ID-us-west1
 └── uploads/
     ├── 1728123456789-landscape1.jpg  (URL pubblica)
     ├── 1728123456790-city1.jpg       (URL pubblica)
@@ -409,18 +409,18 @@ Per 100 utenti/giorno con 10GB foto: **~$1-5/mese**
 # Build Docker con Firebase config
 docker build \
   --build-arg VITE_FIREBASE_API_KEY="AIza..." \
-  --build-arg VITE_FIREBASE_PROJECT_ID="gen-lang-client-0873479092" \
+  --build-arg VITE_FIREBASE_PROJECT_ID="YOUR_PROJECT_ID" \
   --build-arg VITE_FIREBASE_STORAGE_BUCKET="ai-studio-bucket-..." \
   -t gallery2025 .
 
 # Deploy Cloud Run
 gcloud run deploy ai-photo-gallery \
   --source=. \
-  --project=gen-lang-client-0873479092 \
+  --project=YOUR_PROJECT_ID \
   --region=us-west1 \
   --set-env-vars="GEMINI_API_KEY=xxx" \
   --set-env-vars="VITE_FIREBASE_API_KEY=xxx" \
-  --set-env-vars="VITE_FIREBASE_PROJECT_ID=gen-lang-client-0873479092"
+  --set-env-vars="VITE_FIREBASE_PROJECT_ID=YOUR_PROJECT_ID"
 ```
 
 ---

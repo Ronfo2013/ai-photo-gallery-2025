@@ -10,12 +10,12 @@
 ### **Credenziali Installate**
 
 ```
-✅ API Key: AIzaSyBzexnXOj4uAix3d2lZ8wZ57TRC5OaJKfs
-✅ Auth Domain: gen-lang-client-0873479092.firebaseapp.com
-✅ Project ID: gen-lang-client-0873479092
-✅ Storage Bucket: gen-lang-client-0873479092.firebasestorage.app
-✅ Messaging Sender ID: 595991638389
-✅ App ID: 1:595991638389:web:209c59e241883bf96f633c
+✅ API Key: YOUR_FIREBASE_API_KEY_HERE
+✅ Auth Domain: YOUR_PROJECT_ID.firebaseapp.com
+✅ Project ID: YOUR_PROJECT_ID
+✅ Storage Bucket: YOUR_PROJECT_ID.firebasestorage.app
+✅ Messaging Sender ID: YOUR_SENDER_ID
+✅ App ID: 1:YOUR_SENDER_ID:web:209c59e241883bf96f633c
 ✅ Measurement ID: G-GKDHN1391K
 ```
 
@@ -33,7 +33,7 @@
 
 ```bash
 # Vai su Firebase Console
-open https://console.firebase.google.com/project/gen-lang-client-0873479092/firestore
+open https://console.firebase.google.com/project/YOUR_PROJECT_ID/firestore
 ```
 
 **Steps**:
@@ -62,7 +62,7 @@ service cloud.firestore {
 
 ```bash
 # Vai su Firebase Console Storage
-open https://console.firebase.google.com/project/gen-lang-client-0873479092/storage
+open https://console.firebase.google.com/project/YOUR_PROJECT_ID/storage
 ```
 
 **Steps**:
@@ -135,12 +135,12 @@ cd ~/gallery2025-project
 
 # Build con credenziali Firebase
 docker build \
-  --build-arg VITE_FIREBASE_API_KEY="AIzaSyBzexnXOj4uAix3d2lZ8wZ57TRC5OaJKfs" \
-  --build-arg VITE_FIREBASE_AUTH_DOMAIN="gen-lang-client-0873479092.firebaseapp.com" \
-  --build-arg VITE_FIREBASE_PROJECT_ID="gen-lang-client-0873479092" \
-  --build-arg VITE_FIREBASE_STORAGE_BUCKET="gen-lang-client-0873479092.firebasestorage.app" \
-  --build-arg VITE_FIREBASE_MESSAGING_SENDER_ID="595991638389" \
-  --build-arg VITE_FIREBASE_APP_ID="1:595991638389:web:209c59e241883bf96f633c" \
+  --build-arg VITE_FIREBASE_API_KEY="YOUR_FIREBASE_API_KEY_HERE" \
+  --build-arg VITE_FIREBASE_AUTH_DOMAIN="YOUR_PROJECT_ID.firebaseapp.com" \
+  --build-arg VITE_FIREBASE_PROJECT_ID="YOUR_PROJECT_ID" \
+  --build-arg VITE_FIREBASE_STORAGE_BUCKET="YOUR_PROJECT_ID.firebasestorage.app" \
+  --build-arg VITE_FIREBASE_MESSAGING_SENDER_ID="YOUR_SENDER_ID" \
+  --build-arg VITE_FIREBASE_APP_ID="1:YOUR_SENDER_ID:web:209c59e241883bf96f633c" \
   -t gallery2025 .
 
 # Run
@@ -160,15 +160,15 @@ open http://localhost:3000
 ```bash
 gcloud run deploy ai-photo-gallery \
   --source=. \
-  --project=gen-lang-client-0873479092 \
+  --project=YOUR_PROJECT_ID \
   --region=us-west1 \
   --set-env-vars="GEMINI_API_KEY=tua-chiave" \
-  --set-env-vars="VITE_FIREBASE_API_KEY=AIzaSyBzexnXOj4uAix3d2lZ8wZ57TRC5OaJKfs" \
-  --set-env-vars="VITE_FIREBASE_AUTH_DOMAIN=gen-lang-client-0873479092.firebaseapp.com" \
-  --set-env-vars="VITE_FIREBASE_PROJECT_ID=gen-lang-client-0873479092" \
-  --set-env-vars="VITE_FIREBASE_STORAGE_BUCKET=gen-lang-client-0873479092.firebasestorage.app" \
-  --set-env-vars="VITE_FIREBASE_MESSAGING_SENDER_ID=595991638389" \
-  --set-env-vars="VITE_FIREBASE_APP_ID=1:595991638389:web:209c59e241883bf96f633c"
+  --set-env-vars="VITE_FIREBASE_API_KEY=YOUR_FIREBASE_API_KEY_HERE" \
+  --set-env-vars="VITE_FIREBASE_AUTH_DOMAIN=YOUR_PROJECT_ID.firebaseapp.com" \
+  --set-env-vars="VITE_FIREBASE_PROJECT_ID=YOUR_PROJECT_ID" \
+  --set-env-vars="VITE_FIREBASE_STORAGE_BUCKET=YOUR_PROJECT_ID.firebasestorage.app" \
+  --set-env-vars="VITE_FIREBASE_MESSAGING_SENDER_ID=YOUR_SENDER_ID" \
+  --set-env-vars="VITE_FIREBASE_APP_ID=1:YOUR_SENDER_ID:web:209c59e241883bf96f633c"
 ```
 
 ---
@@ -221,9 +221,9 @@ gcloud run deploy ai-photo-gallery \
 ## ⚠️ **Note Importanti**
 
 ### **Storage Bucket**
-Il bucket è: `gen-lang-client-0873479092.firebasestorage.app`
+Il bucket è: `YOUR_PROJECT_ID.firebasestorage.app`
 
-**NON** usare: `gen-lang-client-0873479092.appspot.com` (vecchio formato)
+**NON** usare: `YOUR_PROJECT_ID.appspot.com` (vecchio formato)
 
 ### **Regole Sicurezza**
 Le regole attuali sono **pubbliche** per testing.
@@ -265,7 +265,7 @@ npm run build
 
 ## 📚 **Risorse**
 
-- 🔥 **Firebase Console**: https://console.firebase.google.com/project/gen-lang-client-0873479092
+- 🔥 **Firebase Console**: https://console.firebase.google.com/project/YOUR_PROJECT_ID
 - 📖 **FIREBASE_SETUP.md**: Guida completa setup
 - 🐛 **BUGFIX_REPORT.md**: Errori corretti
 - 📊 **FINAL_AUDIT_REPORT.md**: Audit completo
@@ -293,7 +293,7 @@ npm run build
 
 1. Apri Firebase Console:
    ```bash
-   open https://console.firebase.google.com/project/gen-lang-client-0873479092
+   open https://console.firebase.google.com/project/YOUR_PROJECT_ID
    ```
 
 2. Nella sidebar sinistra:

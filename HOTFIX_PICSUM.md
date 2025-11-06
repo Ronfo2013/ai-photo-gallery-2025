@@ -135,12 +135,12 @@ npm run build
 ```bash
 gcloud run deploy ai-photo-gallery \
   --source=. \
-  --project=gen-lang-client-0873479092 \
+  --project=YOUR_PROJECT_ID \
   --region=us-west1
 
 ✅ Deploy completato
 ✅ Nuova revision: ai-photo-gallery-00004-xxx
-✅ Service URL: https://ai-photo-gallery-595991638389.us-west1.run.app
+✅ Service URL: https://ai-photo-gallery-YOUR_SENDER_ID.us-west1.run.app
 ```
 
 ---
@@ -206,14 +206,14 @@ Se in futuro vuoi aggiungere immagini di esempio:
 
 1. **Carica foto su Firebase Storage**:
    ```bash
-   gsutil cp demo-image.jpg gs://gen-lang-client-0873479092.firebasestorage.app/demo/
+   gsutil cp demo-image.jpg gs://YOUR_PROJECT_ID.firebasestorage.app/demo/
    ```
 
 2. **Usa URL Firebase**:
    ```typescript
    photos: [{
      id: 'demo-1',
-     url: 'https://firebasestorage.googleapis.com/v0/b/gen-lang-client-0873479092.firebasestorage.app/o/demo%2Fdemo-image.jpg?alt=media',
+     url: 'https://firebasestorage.googleapis.com/v0/b/YOUR_PROJECT_ID.firebasestorage.app/o/demo%2Fdemo-image.jpg?alt=media',
      title: 'Demo Photo',
    }]
    ```
@@ -239,8 +239,8 @@ Se in futuro vuoi aggiungere immagini di esempio:
 
 ## 🔗 **LINK UTILI**
 
-- 🌐 **App Live**: https://ai-photo-gallery-595991638389.us-west1.run.app
-- 🔥 **Firebase Console**: https://console.firebase.google.com/project/gen-lang-client-0873479092
+- 🌐 **App Live**: https://ai-photo-gallery-YOUR_SENDER_ID.us-west1.run.app
+- 🔥 **Firebase Console**: https://console.firebase.google.com/project/YOUR_PROJECT_ID
 - ☁️ **Cloud Run**: https://console.cloud.google.com/run/detail/us-west1/ai-photo-gallery
 
 ---

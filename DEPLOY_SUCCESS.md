@@ -20,7 +20,7 @@
   - Memory: 256MB, Runtime: Node.js 18
 
 ### **✅ Frontend Ottimizzato**
-- **URL Live**: https://ai-photo-gallery-595991638389.us-west1.run.app
+- **URL Live**: https://ai-photo-gallery-YOUR_SENDER_ID.us-west1.run.app
 - **Revision**: ai-photo-gallery-00010-lfz
 - **Lazy Loading**: Attivo su tutte le immagini
 - **Thumbnails Usage**: 
@@ -58,7 +58,7 @@
 ## 🧪 COME TESTARE
 
 ### **1. Test Lazy Loading**
-1. Vai su: https://ai-photo-gallery-595991638389.us-west1.run.app
+1. Vai su: https://ai-photo-gallery-YOUR_SENDER_ID.us-west1.run.app
 2. Apri DevTools → Network tab
 3. Ricarica pagina
 4. ✅ Verifica che carichi solo 6-12 immagini inizialmente
@@ -90,19 +90,19 @@
 ### **Cloud Functions Logs**
 ```bash
 # Monitora generazione thumbnails
-npx firebase functions:log --only generateThumbnails --tail --project gen-lang-client-0873479092
+npx firebase functions:log --only generateThumbnails --tail --project YOUR_PROJECT_ID
 
 # Monitora eliminazione thumbnails  
-npx firebase functions:log --only deleteThumbnails --tail --project gen-lang-client-0873479092
+npx firebase functions:log --only deleteThumbnails --tail --project YOUR_PROJECT_ID
 
 # Tutti i logs
-npx firebase functions:log --tail --project gen-lang-client-0873479092
+npx firebase functions:log --tail --project YOUR_PROJECT_ID
 ```
 
 ### **Performance Check**
 ```bash
 # Lighthouse audit
-npx lighthouse https://ai-photo-gallery-595991638389.us-west1.run.app --view
+npx lighthouse https://ai-photo-gallery-YOUR_SENDER_ID.us-west1.run.app --view
 
 # Target metrics:
 # - LCP < 2.5s
@@ -145,7 +145,7 @@ npx lighthouse https://ai-photo-gallery-595991638389.us-west1.run.app --view
 ### **Se Thumbnails Non Generate**
 ```bash
 # Debug logs
-npx firebase functions:log --only generateThumbnails --project gen-lang-client-0873479092
+npx firebase functions:log --only generateThumbnails --project YOUR_PROJECT_ID
 
 # Possibili cause:
 # - File non immagine
@@ -224,13 +224,13 @@ npx firebase functions:log --only generateThumbnails --project gen-lang-client-0
 **Comandi Utili**:
 ```bash
 # Logs functions
-npx firebase functions:log --tail --project gen-lang-client-0873479092
+npx firebase functions:log --tail --project YOUR_PROJECT_ID
 
 # Lista functions
-npx firebase functions:list --project gen-lang-client-0873479092
+npx firebase functions:list --project YOUR_PROJECT_ID
 
 # Redeploy functions
-npx firebase deploy --only functions --project gen-lang-client-0873479092
+npx firebase deploy --only functions --project YOUR_PROJECT_ID
 
 # Redeploy frontend  
 npm run build && gcloud run deploy ai-photo-gallery --source . --region us-west1 --allow-unauthenticated
@@ -252,5 +252,5 @@ npm run build && gcloud run deploy ai-photo-gallery --source . --region us-west1
 
 ---
 
-**URL Live**: https://ai-photo-gallery-595991638389.us-west1.run.app  
+**URL Live**: https://ai-photo-gallery-YOUR_SENDER_ID.us-west1.run.app  
 **Buon divertimento con la tua gallery ottimizzata!** 🚀

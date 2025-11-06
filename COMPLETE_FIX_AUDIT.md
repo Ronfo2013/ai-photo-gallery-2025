@@ -3,7 +3,7 @@
 ## 🎯 Revision Finale
 
 **Revision**: `ai-photo-gallery-00008-j5f`  
-**URL**: https://ai-photo-gallery-595991638389.us-west1.run.app  
+**URL**: https://ai-photo-gallery-YOUR_SENDER_ID.us-west1.run.app  
 **Status**: ✅ **PRODUCTION READY - COMPLETAMENTE TESTATO**
 
 ---
@@ -252,19 +252,19 @@ npm run build
 # Deploy
 gcloud run deploy ai-photo-gallery \
   --source=. \
-  --project=gen-lang-client-0873479092 \
+  --project=YOUR_PROJECT_ID \
   --region=us-west1 \
   --allow-unauthenticated \
-  --set-env-vars="GEMINI_API_KEY=PLACEHOLDER_API_KEY,VITE_FIREBASE_API_KEY=AIzaSyBzexnXOj4uAix3d2lZ8wZ57TRC5OaJKfs,VITE_FIREBASE_AUTH_DOMAIN=gen-lang-client-0873479092.firebaseapp.com,VITE_FIREBASE_PROJECT_ID=gen-lang-client-0873479092,VITE_FIREBASE_STORAGE_BUCKET=gen-lang-client-0873479092.firebasestorage.app,VITE_FIREBASE_MESSAGING_SENDER_ID=595991638389,VITE_FIREBASE_APP_ID=1:595991638389:web:209c59e241883bf96f633c"
+  --set-env-vars="GEMINI_API_KEY=PLACEHOLDER_API_KEY,VITE_FIREBASE_API_KEY=YOUR_FIREBASE_API_KEY_HERE,VITE_FIREBASE_AUTH_DOMAIN=YOUR_PROJECT_ID.firebaseapp.com,VITE_FIREBASE_PROJECT_ID=YOUR_PROJECT_ID,VITE_FIREBASE_STORAGE_BUCKET=YOUR_PROJECT_ID.firebasestorage.app,VITE_FIREBASE_MESSAGING_SENDER_ID=YOUR_SENDER_ID,VITE_FIREBASE_APP_ID=1:YOUR_SENDER_ID:web:209c59e241883bf96f633c"
 ```
 
 ### **Verifica Deploy**
 ```bash
 # Check revision
-gcloud run revisions list --service=ai-photo-gallery --region=us-west1 --project=gen-lang-client-0873479092 --limit=1
+gcloud run revisions list --service=ai-photo-gallery --region=us-west1 --project=YOUR_PROJECT_ID --limit=1
 
 # Test endpoint
-curl https://ai-photo-gallery-595991638389.us-west1.run.app/
+curl https://ai-photo-gallery-YOUR_SENDER_ID.us-west1.run.app/
 ```
 
 ---

@@ -117,7 +117,7 @@ try {
 ### **1. Deploy delle Cloud Functions**
 ```bash
 cd /Users/angelo-mac/gallery2025-project
-firebase deploy --only functions --project gen-lang-client-0873479092
+firebase deploy --only functions --project YOUR_PROJECT_ID
 ```
 
 ### **2. Test Upload**
@@ -130,7 +130,7 @@ firebase deploy --only functions --project gen-lang-client-0873479092
 ### **3. Verifica nei Logs**
 ```bash
 # Monitora i logs della Cloud Function
-firebase functions:log --only generateThumbnails --tail --project gen-lang-client-0873479092
+firebase functions:log --only generateThumbnails --tail --project YOUR_PROJECT_ID
 ```
 
 **Logs attesi:**
@@ -148,7 +148,7 @@ Generating Detail view thumbnail (800x800)...
 
 ### **4. Verifica in Firestore Console**
 1. Vai su [Firebase Console](https://console.firebase.google.com)
-2. Progetto: `gen-lang-client-0873479092`
+2. Progetto: `YOUR_PROJECT_ID`
 3. Firestore Database → `gallery` → `config`
 4. Verifica che le foto abbiano i campi:
    - `optimizedUrl`
@@ -210,10 +210,10 @@ Generating Detail view thumbnail (800x800)...
 ### **Comandi utili:**
 ```bash
 # Logs Cloud Function
-firebase functions:log --only generateThumbnails --tail --project gen-lang-client-0873479092
+firebase functions:log --only generateThumbnails --tail --project YOUR_PROJECT_ID
 
 # Redeploy se necessario
-firebase deploy --only functions --project gen-lang-client-0873479092
+firebase deploy --only functions --project YOUR_PROJECT_ID
 
 # Test locale
 firebase emulators:start --only functions,firestore,storage

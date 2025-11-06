@@ -290,7 +290,7 @@ export const getBaseUrl = (siteSettings?: SiteSettings): string => {
   
   // PRIORITÀ 3: In produzione, usa URL di Cloud Run
   if (import.meta.env.PROD) {
-    return 'https://ai-photo-gallery-595991638389.us-west1.run.app';
+    return 'https://ai-photo-gallery-YOUR_SENDER_ID.us-west1.run.app';
   }
   
   // PRIORITÀ 4: Fallback finale - usa window.location.origin

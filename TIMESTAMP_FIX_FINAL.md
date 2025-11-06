@@ -83,14 +83,14 @@ Carico 100 foto simultaneamente → Tutte e 100 visibili ✅
 ## 🚀 Deploy Completato
 
 **Revision**: `ai-photo-gallery-00005-dm5`  
-**URL**: https://ai-photo-gallery-595991638389.us-west1.run.app  
+**URL**: https://ai-photo-gallery-YOUR_SENDER_ID.us-west1.run.app  
 **Status**: ✅ LIVE
 
 ---
 
 ## 🧪 Come Testare
 
-1. **Apri l'app**: https://ai-photo-gallery-595991638389.us-west1.run.app
+1. **Apri l'app**: https://ai-photo-gallery-YOUR_SENDER_ID.us-west1.run.app
 2. **Vai su Admin Panel**
 3. **Seleziona un album**
 4. **Click "Aggiungi Foto"**
@@ -117,7 +117,7 @@ Se vedi ancora il problema:
 
 Vai su Firebase Console:
 ```
-https://console.firebase.google.com/project/gen-lang-client-0873479092/firestore/data
+https://console.firebase.google.com/project/YOUR_PROJECT_ID/firestore/data
 ```
 
 Controlla la collection `gallery` → document `config` → field `albums`

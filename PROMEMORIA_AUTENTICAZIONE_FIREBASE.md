@@ -10,7 +10,7 @@ Per utilizzare il **pannello Admin** della tua gallery, devi configurare l'auten
 
 ### **1. Accedi alla Console Firebase**
 - Vai su: https://console.firebase.google.com/
-- Seleziona il progetto: **gen-lang-client-0873479092**
+- Seleziona il progetto: **YOUR_PROJECT_ID**
 
 ---
 
@@ -48,7 +48,7 @@ Per utilizzare il **pannello Admin** della tua gallery, devi configurare l'auten
 ## ✅ **VERIFICA DELLA CONFIGURAZIONE**
 
 ### **Test Login Admin Panel**
-1. Vai all'URL della tua app: `https://ai-photo-gallery-595991638389.us-west1.run.app/#/admin`
+1. Vai all'URL della tua app: `https://ai-photo-gallery-YOUR_SENDER_ID.us-west1.run.app/#/admin`
 2. Vedrai il form di login con:
    - Campo "Email"
    - Campo "Password"
@@ -123,7 +123,7 @@ Password: [TUA_PASSWORD_SICURA]
 
 - **Firebase Console**: https://console.firebase.google.com/
 - **Docs Authentication**: https://firebase.google.com/docs/auth
-- **URL Admin Panel**: https://ai-photo-gallery-595991638389.us-west1.run.app/#/admin
+- **URL Admin Panel**: https://ai-photo-gallery-YOUR_SENDER_ID.us-west1.run.app/#/admin
 
 ---
 
@@ -150,7 +150,7 @@ Dopo aver configurato l'autenticazione:
 ---
 
 **Ultimo aggiornamento**: 17 Ottobre 2025  
-**Progetto Firebase**: gen-lang-client-0873479092  
+**Progetto Firebase**: YOUR_PROJECT_ID  
 **Regione Cloud Run**: us-west1
 
 

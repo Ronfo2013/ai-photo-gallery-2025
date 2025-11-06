@@ -236,7 +236,7 @@ for (const varName of requiredEnvVars) {
 - ✅ Nessun path unificato errato
 
 ### **Firebase Storage**
-- ✅ Bucket corretto: `gen-lang-client-0873479092.appspot.com`
+- ✅ Bucket corretto: `YOUR_PROJECT_ID.appspot.com`
 - ✅ Upload path: `uploads/${timestamp}-${filename}`
 - ✅ Delete handling con error checking
 

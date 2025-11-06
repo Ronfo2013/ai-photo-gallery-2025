@@ -47,7 +47,7 @@ gcloud run deploy ai-photo-gallery \
   --region us-west1 \
   --platform managed \
   --allow-unauthenticated \
-  --set-build-env-vars VITE_FIREBASE_API_KEY=AIzaSyBzexnXOj4uAix3d2lZ8wZ57TRC5OaJKfs,VITE_FIREBASE_AUTH_DOMAIN=gen-lang-client-0873479092.firebaseapp.com,VITE_FIREBASE_PROJECT_ID=gen-lang-client-0873479092,VITE_FIREBASE_STORAGE_BUCKET=gen-lang-client-0873479092.firebasestorage.app,VITE_FIREBASE_MESSAGING_SENDER_ID=595991638389,VITE_FIREBASE_APP_ID=1:595991638389:web:209c59e241883bf96f633c
+  --set-build-env-vars VITE_FIREBASE_API_KEY=YOUR_FIREBASE_API_KEY_HERE,VITE_FIREBASE_AUTH_DOMAIN=YOUR_PROJECT_ID.firebaseapp.com,VITE_FIREBASE_PROJECT_ID=YOUR_PROJECT_ID,VITE_FIREBASE_STORAGE_BUCKET=YOUR_PROJECT_ID.firebasestorage.app,VITE_FIREBASE_MESSAGING_SENDER_ID=YOUR_SENDER_ID,VITE_FIREBASE_APP_ID=1:YOUR_SENDER_ID:web:209c59e241883bf96f633c
 ```
 
 **Tempo stimato**: 3-5 minuti
@@ -93,11 +93,11 @@ gcloud run services describe ai-photo-gallery --region us-west1 --format="value(
 
 Dovrebbe restituire:
 ```
-https://ai-photo-gallery-595991638389.us-west1.run.app
+https://ai-photo-gallery-YOUR_SENDER_ID.us-west1.run.app
 ```
 
 ### **2. Testa l'App**
-1. Apri: https://ai-photo-gallery-595991638389.us-west1.run.app
+1. Apri: https://ai-photo-gallery-YOUR_SENDER_ID.us-west1.run.app
 2. Verifica che NON ci siano più errori Firebase nella console
 3. Vai a: `/#/admin`
 4. Dovrebbe apparire il form di login (non più errori API key)
@@ -117,10 +117,10 @@ Vedi: `PROMEMORIA_AUTENTICAZIONE_FIREBASE.md`
 
 Quick steps:
 1. Console Firebase: https://console.firebase.google.com/
-2. Progetto: gen-lang-client-0873479092
+2. Progetto: YOUR_PROJECT_ID
 3. Authentication → Sign-in method → Abilita "Email/Password"
 4. Users → Add user (email + password)
-5. Testa login su: https://ai-photo-gallery-595991638389.us-west1.run.app/#/admin
+5. Testa login su: https://ai-photo-gallery-YOUR_SENDER_ID.us-west1.run.app/#/admin
 
 ### **2. Test Completo**
 - [ ] Home page carica senza errori

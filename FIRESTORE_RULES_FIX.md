@@ -11,7 +11,7 @@ Error getting config from Firestore: FirebaseError: Missing or insufficient perm
 
 1. **Apri Firebase Console**:
    ```
-   https://console.firebase.google.com/project/gen-lang-client-0873479092/firestore/rules
+   https://console.firebase.google.com/project/YOUR_PROJECT_ID/firestore/rules
    ```
 
 2. **Nella sezione "Rules"**, sostituisci il contenuto con:
@@ -38,7 +38,7 @@ Error getting config from Firestore: FirebaseError: Missing or insufficient perm
    
    a. Apri:
    ```
-   https://console.firebase.google.com/project/gen-lang-client-0873479092/storage/rules
+   https://console.firebase.google.com/project/YOUR_PROJECT_ID/storage/rules
    ```
    
    b. Sostituisci con:
@@ -58,7 +58,7 @@ Error getting config from Firestore: FirebaseError: Missing or insufficient perm
 
 5. **Aspetta 10-30 secondi** per la propagazione delle regole
 
-6. **Ricarica l'app**: https://ai-photo-gallery-595991638389.us-west1.run.app
+6. **Ricarica l'app**: https://ai-photo-gallery-YOUR_SENDER_ID.us-west1.run.app
 
 ---
 
@@ -68,7 +68,7 @@ Se preferisci usare Google Cloud Console:
 
 1. **Apri**:
    ```
-   https://console.cloud.google.com/firestore/databases/-default-/rules?project=gen-lang-client-0873479092
+   https://console.cloud.google.com/firestore/databases/-default-/rules?project=YOUR_PROJECT_ID
    ```
 
 2. Segui gli stessi passi del Metodo 1
@@ -84,7 +84,7 @@ cd ~/gallery2025-project
 
 # Inizializza Firebase (solo la prima volta)
 firebase login
-firebase use gen-lang-client-0873479092
+firebase use YOUR_PROJECT_ID
 
 # Deploya le regole
 firebase deploy --only firestore:rules
@@ -94,7 +94,7 @@ firebase deploy --only firestore:rules
 
 ## 🧪 Test dopo il Fix
 
-1. Apri l'app: https://ai-photo-gallery-595991638389.us-west1.run.app
+1. Apri l'app: https://ai-photo-gallery-YOUR_SENDER_ID.us-west1.run.app
 2. Apri Console (F12)
 3. **NON** dovresti più vedere l'errore "Missing or insufficient permissions"
 4. L'app dovrebbe caricare correttamente

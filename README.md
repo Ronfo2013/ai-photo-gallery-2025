@@ -37,7 +37,7 @@ Segui la guida completa: **[FIREBASE_SETUP.md](./FIREBASE_SETUP.md)**
 
 In breve:
 1. Vai su [Firebase Console](https://console.firebase.google.com/)
-2. Seleziona/Importa progetto: `gen-lang-client-0873479092`
+2. Seleziona/Importa progetto: `YOUR_PROJECT_ID`
 3. Abilita Firestore + Cloud Storage
 4. Copia le credenziali in `.env.local`
 
@@ -52,10 +52,10 @@ Inserisci le tue credenziali:
 ```env
 GEMINI_API_KEY=your-gemini-api-key
 VITE_FIREBASE_API_KEY=your-firebase-api-key
-VITE_FIREBASE_AUTH_DOMAIN=gen-lang-client-0873479092.firebaseapp.com
-VITE_FIREBASE_PROJECT_ID=gen-lang-client-0873479092
-VITE_FIREBASE_STORAGE_BUCKET=gen-lang-client-0873479092.appspot.com
-VITE_FIREBASE_MESSAGING_SENDER_ID=595991638389
+VITE_FIREBASE_AUTH_DOMAIN=YOUR_PROJECT_ID.firebaseapp.com
+VITE_FIREBASE_PROJECT_ID=YOUR_PROJECT_ID
+VITE_FIREBASE_STORAGE_BUCKET=YOUR_PROJECT_ID.appspot.com
+VITE_FIREBASE_MESSAGING_SENDER_ID=YOUR_SENDER_ID
 VITE_FIREBASE_APP_ID=your-firebase-app-id
 ```
 
@@ -76,10 +76,10 @@ Apri: http://localhost:5173
 ```bash
 docker build -t gallery2025 \
   --build-arg VITE_FIREBASE_API_KEY="your-key" \
-  --build-arg VITE_FIREBASE_AUTH_DOMAIN="gen-lang-client-0873479092.firebaseapp.com" \
-  --build-arg VITE_FIREBASE_PROJECT_ID="gen-lang-client-0873479092" \
-  --build-arg VITE_FIREBASE_STORAGE_BUCKET="ai-studio-bucket-595991638389-us-west1.appspot.com" \
-  --build-arg VITE_FIREBASE_MESSAGING_SENDER_ID="595991638389" \
+  --build-arg VITE_FIREBASE_AUTH_DOMAIN="YOUR_PROJECT_ID.firebaseapp.com" \
+  --build-arg VITE_FIREBASE_PROJECT_ID="YOUR_PROJECT_ID" \
+  --build-arg VITE_FIREBASE_STORAGE_BUCKET="ai-studio-bucket-YOUR_SENDER_ID-us-west1.appspot.com" \
+  --build-arg VITE_FIREBASE_MESSAGING_SENDER_ID="YOUR_SENDER_ID" \
   --build-arg VITE_FIREBASE_APP_ID="your-app-id" \
   .
 ```
@@ -102,12 +102,12 @@ Accedi a: http://localhost:3000  # Server produzione
 ```bash
 gcloud run deploy ai-photo-gallery \
   --source=. \
-  --project=gen-lang-client-0873479092 \
+  --project=YOUR_PROJECT_ID \
   --region=us-west1 \
   --set-env-vars="GEMINI_API_KEY=your-key,VITE_FIREBASE_API_KEY=your-firebase-key,..."
 ```
 
-URL: https://ai-photo-gallery-595991638389.us-west1.run.app
+URL: https://ai-photo-gallery-YOUR_SENDER_ID.us-west1.run.app
 
 ---
 
@@ -174,7 +174,7 @@ docker logs gallery2025
 docker stop gallery2025
 
 # Google Cloud
-gcloud config set project gen-lang-client-0873479092
+gcloud config set project YOUR_PROJECT_ID
 gcloud run services list
 gcloud run deploy ai-photo-gallery --source=.
 ```

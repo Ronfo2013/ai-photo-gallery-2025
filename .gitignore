@@ -11,17 +11,19 @@ lerna-debug.log*
 node_modules
 */node_modules
 
-# Build outputs
-dist
-dist-ssr
+# Build outputs (may contain embedded API keys)
+dist/
+dist-ssr/
 *.local
 
-# Environment files
+# Environment files (NEVER commit these)
 .env
+.env.*
+*.env
 .env.local
 .env.production
 .env.development
-*.env
+.env.staging
 
 # Firebase
 .firebase

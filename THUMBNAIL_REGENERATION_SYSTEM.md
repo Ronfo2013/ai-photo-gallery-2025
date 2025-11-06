@@ -185,7 +185,7 @@ await new Promise(resolve => setTimeout(resolve, 1000));
 
 ## 🚀 **DEPLOYMENT INFO**
 
-- **URL**: https://ai-photo-gallery-595991638389.us-west1.run.app
+- **URL**: https://ai-photo-gallery-YOUR_SENDER_ID.us-west1.run.app
 - **Revision**: `ai-photo-gallery-00016-j9s`
 - **Status**: ✅ **LIVE E FUNZIONANTE**
 
@@ -195,7 +195,7 @@ await new Promise(resolve => setTimeout(resolve, 1000));
 
 ### **🔥 Per Risolvere Thumbnail Mancanti SUBITO:**
 
-1. **Vai all'AdminPanel**: https://ai-photo-gallery-595991638389.us-west1.run.app/admin
+1. **Vai all'AdminPanel**: https://ai-photo-gallery-YOUR_SENDER_ID.us-west1.run.app/admin
 2. **Trova "Gestione Thumbnail"** nella sezione Album
 3. **Clicca per espandere** il pannello
 4. **Clicca "Controlla Stato"** per vedere le thumbnail mancanti

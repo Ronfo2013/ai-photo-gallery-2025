@@ -10,7 +10,7 @@
 
 ### **Errore Originale:**
 ```
-GET https://firebasestorage.googleapis.com/v0/b/gen-lang-client-0873479092.firebasestorage.app/o/uploads%2F1760637836681-168cffc9-OPIUM-070_thumb_800.webp 404 (Not Found)
+GET https://firebasestorage.googleapis.com/v0/b/YOUR_PROJECT_ID.firebasestorage.app/o/uploads%2F1760637836681-168cffc9-OPIUM-070_thumb_800.webp 404 (Not Found)
 ```
 
 ### **Causa del Problema:**

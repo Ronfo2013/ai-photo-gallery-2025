@@ -36,7 +36,7 @@ curl -I https://gallery.opiumpordenone.com
 
 ### **Soluzione 3: Accesso Temporaneo**
 Nel frattempo, puoi accedere al sito tramite:
-- **URL diretto**: https://ai-photo-gallery-595991638389.us-west1.run.app
+- **URL diretto**: https://ai-photo-gallery-YOUR_SENDER_ID.us-west1.run.app
 - **HTTP temporaneo**: http://gallery.opiumpordenone.com (reindirizza a HTTPS)
 
 ## 🔍 Monitoraggio

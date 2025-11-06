@@ -83,7 +83,7 @@ const photosToDisplay = album?.photos || [];
 
 **Metodo Manuale** (consigliato):
 ```
-1. Apri: https://console.firebase.google.com/project/gen-lang-client-0873479092/firestore
+1. Apri: https://console.firebase.google.com/project/YOUR_PROJECT_ID/firestore
 2. Trova collection: gallery > document: config
 3. Click sui tre puntini (⋮)
 4. Seleziona: "Delete document"
@@ -213,7 +213,7 @@ gcloud run deploy ai-photo-gallery ...
 
 **Opzione A - Firebase Console** (più facile):
 ```bash
-open https://console.firebase.google.com/project/gen-lang-client-0873479092/firestore/databases/-default-/data/~2Fgallery~2Fconfig
+open https://console.firebase.google.com/project/YOUR_PROJECT_ID/firestore/databases/-default-/data/~2Fgallery~2Fconfig
 ```
 Poi click su **Delete document** (icona cestino)
 
@@ -226,7 +226,7 @@ Poi click su **Delete document** (icona cestino)
 ### **Step 2: Ricarica l'App**
 
 ```
-1. Apri: https://ai-photo-gallery-595991638389.us-west1.run.app
+1. Apri: https://ai-photo-gallery-YOUR_SENDER_ID.us-west1.run.app
 2. L'app rileva che non ci sono dati
 3. Genera automaticamente dati puliti
 4. Salva in Firestore
@@ -273,14 +273,14 @@ Poi click su **Delete document** (icona cestino)
 
 1. **Cancellare il document Firestore**:
    ```
-   https://console.firebase.google.com/project/gen-lang-client-0873479092/firestore
+   https://console.firebase.google.com/project/YOUR_PROJECT_ID/firestore
    
    Cancella: gallery/config
    ```
 
 2. **Ricaricare l'app**:
    ```
-   https://ai-photo-gallery-595991638389.us-west1.run.app
+   https://ai-photo-gallery-YOUR_SENDER_ID.us-west1.run.app
    ```
 
 3. **Verificare**:
@@ -304,8 +304,8 @@ Poi click su **Delete document** (icona cestino)
 
 ## 🔗 **LINK UTILI**
 
-- 🌐 **App**: https://ai-photo-gallery-595991638389.us-west1.run.app
-- 🔥 **Firestore Console**: https://console.firebase.google.com/project/gen-lang-client-0873479092/firestore/databases/-default-/data/~2Fgallery~2Fconfig
+- 🌐 **App**: https://ai-photo-gallery-YOUR_SENDER_ID.us-west1.run.app
+- 🔥 **Firestore Console**: https://console.firebase.google.com/project/YOUR_PROJECT_ID/firestore/databases/-default-/data/~2Fgallery~2Fconfig
 - ☁️ **Cloud Run**: https://console.cloud.google.com/run/detail/us-west1/ai-photo-gallery
 
 ---

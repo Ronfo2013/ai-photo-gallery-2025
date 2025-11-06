@@ -214,7 +214,7 @@ export const uploadFile = async (file: File): Promise<{ path: string, url: strin
 ## 🚀 Deploy
 
 **Revision**: `ai-photo-gallery-00007-mr9`  
-**URL**: https://ai-photo-gallery-595991638389.us-west1.run.app  
+**URL**: https://ai-photo-gallery-YOUR_SENDER_ID.us-west1.run.app  
 **Status**: ✅ **PRODUCTION READY**
 
 ---

@@ -29,7 +29,7 @@ L'app sta usando il VECCHIO codice con LocalStorage, NON Firebase!
 4. Click **"Clear site data"**
 5. **CHIUDI** completamente il browser
 6. **RIAPRI** il browser
-7. Vai su: https://ai-photo-gallery-595991638389.us-west1.run.app
+7. Vai su: https://ai-photo-gallery-YOUR_SENDER_ID.us-west1.run.app
 
 ---
 
@@ -41,7 +41,7 @@ Probabilmente stai vedendo una revision VECCHIA (prima della migrazione Firebase
 gcloud run revisions list \
   --service=ai-photo-gallery \
   --region=us-west1 \
-  --project=gen-lang-client-0873479092 \
+  --project=YOUR_PROJECT_ID \
   --limit=3
 ```
 
@@ -135,10 +135,10 @@ cat dist/index.html | grep "script.*src"
 # 4. Redeploy
 gcloud run deploy ai-photo-gallery \
   --source=. \
-  --project=gen-lang-client-0873479092 \
+  --project=YOUR_PROJECT_ID \
   --region=us-west1 \
   --allow-unauthenticated \
-  --set-env-vars="GEMINI_API_KEY=PLACEHOLDER_API_KEY,VITE_FIREBASE_API_KEY=AIzaSyBzexnXOj4uAix3d2lZ8wZ57TRC5OaJKfs,VITE_FIREBASE_AUTH_DOMAIN=gen-lang-client-0873479092.firebaseapp.com,VITE_FIREBASE_PROJECT_ID=gen-lang-client-0873479092,VITE_FIREBASE_STORAGE_BUCKET=gen-lang-client-0873479092.firebasestorage.app,VITE_FIREBASE_MESSAGING_SENDER_ID=595991638389,VITE_FIREBASE_APP_ID=1:595991638389:web:209c59e241883bf96f633c"
+  --set-env-vars="GEMINI_API_KEY=PLACEHOLDER_API_KEY,VITE_FIREBASE_API_KEY=YOUR_FIREBASE_API_KEY_HERE,VITE_FIREBASE_AUTH_DOMAIN=YOUR_PROJECT_ID.firebaseapp.com,VITE_FIREBASE_PROJECT_ID=YOUR_PROJECT_ID,VITE_FIREBASE_STORAGE_BUCKET=YOUR_PROJECT_ID.firebasestorage.app,VITE_FIREBASE_MESSAGING_SENDER_ID=YOUR_SENDER_ID,VITE_FIREBASE_APP_ID=1:YOUR_SENDER_ID:web:209c59e241883bf96f633c"
 ```
 
 ---
@@ -146,7 +146,7 @@ gcloud run deploy ai-photo-gallery \
 ## 🧪 TEST DOPO IL FIX
 
 1. **Cancella cache browser** (vedi sopra)
-2. **Apri**: https://ai-photo-gallery-595991638389.us-west1.run.app
+2. **Apri**: https://ai-photo-gallery-YOUR_SENDER_ID.us-west1.run.app
 3. **Apri Console** (F12)
 4. **Cerca errori**:
    - ❌ NO "index.tsx"
