@@ -1,0 +1,62 @@
+{
+  "name": "@ai-gallery/standalone-preloader",
+  "version": "1.0.0",
+  "description": "🎨 Componente preloader completamente autonomo e riutilizzabile per React/TypeScript",
+  "main": "StandalonePreloader.tsx",
+  "types": "StandalonePreloader.tsx",
+  "files": [
+    "StandalonePreloader.tsx",
+    "PreloaderExamples.tsx",
+    "STANDALONE_PRELOADER_DOCS.md"
+  ],
+  "keywords": [
+    "react",
+    "typescript",
+    "preloader",
+    "loading",
+    "spinner",
+    "glassmorphism",
+    "ui",
+    "component",
+    "standalone",
+    "reusable"
+  ],
+  "author": {
+    "name": "AI Photo Gallery 2025",
+    "email": "dev@ai-gallery.com"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Ronfo2013/ai-photo-gallery-2025.git",
+    "directory": "components"
+  },
+  "homepage": "https://github.com/Ronfo2013/ai-photo-gallery-2025#readme",
+  "bugs": {
+    "url": "https://github.com/Ronfo2013/ai-photo-gallery-2025/issues"
+  },
+  "peerDependencies": {
+    "react": ">=16.8.0",
+    "react-dom": ">=16.8.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.0",
+    "@types/react-dom": "^18.0.0",
+    "typescript": "^5.0.0"
+  },
+  "scripts": {
+    "build": "echo 'No build needed - pure TypeScript component'",
+    "test": "echo 'Tests coming soon'",
+    "example": "echo 'Check PreloaderExamples.tsx for usage examples'"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "funding": {
+    "type": "github",
+    "url": "https://github.com/sponsors/Ronfo2013"
+  }
+}
