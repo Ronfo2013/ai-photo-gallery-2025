@@ -1,0 +1,7 @@
+# Suggerimenti di miglioramento
+
+- **Gestione GTM dinamica**: in `components/GtmScript.tsx` lo script viene iniettato al primo consenso ma non viene aggiornato se cambia `siteSettings.gtmId`. Aggiungere cleanup e re-injection quando l’ID viene aggiornato o disattivato per evitare di eseguire il container sbagliato.
+- **Placeholder copertina album**: `generateInitialData` in `services/bucketService.ts` imposta `coverPhotoUrl` vuota per l’album iniziale. Usare lo stesso placeholder già impiegato in `addAlbum` e `deletePhotosFromAlbum` per prevenire immagini rotte nella homepage.
+- **Sync copertina con ordinamento**: in `context/AppContext.tsx` la funzione `updateAlbumPhotos` non aggiorna `coverPhotoUrl`. Allineare la cover alla prima foto del nuovo ordine (o a un placeholder quando la lista è vuota) così album list e dettaglio restano consistenti.
+- **Placeholder server mancante**: `server/server.js` tenta di servire `server/public/placeholder.html` quando non trova `dist/index.html`, ma il file non esiste. Creare il placeholder o gestire l’errore servendo un messaggio chiaro per evitare 404 in deploy freschi.
+- **Migrazione siteSettings incompleta**: `performMigration` non reimposta campi introdotti dopo (`footerText`, `aiEnabled`, `geminiApiKey`). Integrare i default durante la migrazione da Firestore per evitare configurazioni legacy prive di testo footer o funzionalità AI disattivate involontariamente.

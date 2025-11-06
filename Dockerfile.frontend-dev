@@ -1,0 +1,33 @@
+# ⚛️ DOCKERFILE PER FRONTEND DEVELOPMENT
+# Container Vite con Hot Module Replacement
+
+FROM node:22-slim
+
+WORKDIR /app
+
+# Installa curl per health checks
+RUN apt-get update && apt-get install -y curl && rm -rf /var/lib/apt/lists/*
+
+# Copia dipendenze
+COPY package*.json ./
+RUN npm ci
+
+# Copia configurazione Vite
+COPY vite.config.ts ./
+COPY tsconfig.json ./
+COPY index.html ./
+
+# Il resto del codice sarà montato come volume per hot reload
+
+EXPOSE 5173
+
+# Vite dev server con host binding per Docker
+CMD ["npm", "run", "dev", "--", "--host", "0.0.0.0", "--port", "5173"]
+
+
+
+
+
+
+
+

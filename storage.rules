@@ -1,0 +1,14 @@
+rules_version = '2';
+service firebase.storage {
+  match /b/{bucket}/o {
+    // Regole per tutte le immagini caricate
+    match /{allPaths=**} {
+      // Permetti lettura pubblica (chiunque può vedere le immagini)
+      allow read: if true;
+      
+      // Permetti scrittura a tutti (temporaneo - TODO: aggiungere autenticazione)
+      allow write: if true;
+    }
+  }
+}
+

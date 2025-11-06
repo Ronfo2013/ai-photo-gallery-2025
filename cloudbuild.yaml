@@ -1,0 +1,127 @@
+# ☁️ GOOGLE CLOUD BUILD CONFIGURATION
+# Deploy ottimizzato per Cloud Run con caching intelligente
+
+steps:
+  # ==========================================
+  # Step 1: Build con Docker Layer Caching
+  # ==========================================
+  - name: 'gcr.io/cloud-builders/docker'
+    id: 'build-image'
+    args:
+      - 'build'
+      - '--cache-from'
+      - 'gcr.io/$PROJECT_ID/ai-photo-gallery:latest'
+      - '--tag'
+      - 'gcr.io/$PROJECT_ID/ai-photo-gallery:$BUILD_ID'
+      - '--tag' 
+      - 'gcr.io/$PROJECT_ID/ai-photo-gallery:latest'
+      - '--file'
+      - 'Dockerfile.optimized'  # Usa la versione ottimizzata
+      - '.'
+    timeout: '1200s'  # 20 minuti max per build
+
+  # ==========================================
+  # Step 2: Push dell'immagine al registry
+  # ==========================================
+  - name: 'gcr.io/cloud-builders/docker'
+    id: 'push-image'
+    args:
+      - 'push'
+      - 'gcr.io/$PROJECT_ID/ai-photo-gallery:$BUILD_ID'
+    waitFor: ['build-image']
+
+  # ==========================================
+  # Step 3: Push del tag latest per cache
+  # ==========================================
+  - name: 'gcr.io/cloud-builders/docker'
+    id: 'push-latest'
+    args:
+      - 'push'
+      - 'gcr.io/$PROJECT_ID/ai-photo-gallery:latest'
+    waitFor: ['build-image']
+
+  # ==========================================
+  # Step 4: Deploy su Cloud Run
+  # ==========================================
+  - name: 'gcr.io/cloud-builders/gcloud'
+    id: 'deploy-cloudrun'
+    args:
+      - 'run'
+      - 'deploy'
+      - 'ai-photo-gallery'
+      - '--image'
+      - 'gcr.io/$PROJECT_ID/ai-photo-gallery:$BUILD_ID'
+      - '--region'
+      - 'us-west1'
+      - '--platform'
+      - 'managed'
+      - '--allow-unauthenticated'
+      - '--memory'
+      - '2Gi'
+      - '--cpu'
+      - '2'
+      - '--concurrency'
+      - '100'
+      - '--max-instances'
+      - '10'
+      - '--min-instances'
+      - '0'
+      - '--port'
+      - '3000'
+      - '--set-env-vars'
+      - 'NODE_ENV=production'
+      - '--timeout'
+      - '300'
+    waitFor: ['push-image']
+
+  # ==========================================
+  # Step 5: Verifica Health Check (Opzionale)
+  # ==========================================
+  - name: 'gcr.io/cloud-builders/curl'
+    id: 'health-check'
+    args:
+      - '-f'
+      - 'https://ai-photo-gallery-$PROJECT_ID.run.app/'
+    waitFor: ['deploy-cloudrun']
+    allowFailure: true  # Non bloccare se health check fallisce
+
+# ==========================================
+# Configurazioni Globali
+# ==========================================
+options:
+  # Usa macchina più potente per build più veloce
+  machineType: 'E2_HIGHCPU_8'
+  diskSizeGb: 100
+  
+  # Logging dettagliato per debug
+  logging: CLOUD_LOGGING_ONLY
+  
+  # Variabili di sostituzione
+  substitution_option: 'ALLOW_LOOSE'
+
+# Timeout globale (30 minuti)
+timeout: '1800s'
+
+# ==========================================
+# Immagini da cachare per build futuri
+# ==========================================
+images:
+  - 'gcr.io/$PROJECT_ID/ai-photo-gallery:$BUILD_ID'
+  - 'gcr.io/$PROJECT_ID/ai-photo-gallery:latest'
+
+# ==========================================
+# Variabili disponibili
+# ==========================================
+substitutions:
+  _REGION: 'us-west1'
+  _SERVICE_NAME: 'ai-photo-gallery'
+  _MEMORY: '2Gi'
+  _CPU: '2'
+
+
+
+
+
+
+
+

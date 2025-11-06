@@ -1,0 +1,35 @@
+# .dockerignore - Esclude file dal contesto Docker Build
+
+# File di sviluppo
+.env.local
+.env.local.example
+
+# Git
+.git
+.gitignore
+
+# Cache e build locali (verranno rigenerati nel container)
+node_modules
+.vite
+.DS_Store
+
+# Documentazione
+*.md
+!README.md
+
+# File temporanei
+*.log
+
+#File non necessari per il deploy
+metadata.json
+reset-firestore.js
+FORCE_CLEAN.md
+HOTFIX_*.md
+BUGFIX_REPORT.md
+CHANGELOG_*.md
+DEPLOY_SUCCESS.md
+FINAL_AUDIT_REPORT.md
+FIX_URGENTE.md
+FIREBASE_SETUP.md
+SETUP_COMPLETE.md
+

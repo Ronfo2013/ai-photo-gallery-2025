@@ -1,0 +1,50 @@
+{
+  "name": "ai-photo-gallery",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    
+    "// 🐳 Docker Development": "",
+    "dev:docker": "docker-compose -f docker-compose.dev.yml up --build",
+    "dev:docker:clean": "docker-compose -f docker-compose.dev.yml down -v",
+    "dev:docker:logs": "docker-compose -f docker-compose.dev.yml logs -f",
+    
+    "// 🧪 Testing": "",
+    "test:local-cloudrun": "npm run build && docker build -f Dockerfile.optimized -t local-gallery . && docker run -p 3000:3000 --env-file env.local.example local-gallery",
+    
+    "// 🚀 Deploy": "",
+    "deploy:fast": "gcloud builds submit --config cloudbuild.yaml",
+    "deploy:direct": "gcloud run deploy ai-photo-gallery --source . --region us-west1 --allow-unauthenticated",
+    
+    "// 🔥 Firebase": "",
+    "firebase:start": "firebase emulators:start --only firestore,storage,functions,auth",
+    "firebase:export": "firebase emulators:export ./firebase-export",
+    "firebase:import": "firebase emulators:start --import ./firebase-export",
+    
+    "// 🧹 Utilities": "",
+    "clean": "rm -rf dist node_modules/.vite",
+    "clean:docker": "docker system prune -f && docker volume prune -f",
+    "setup:env": "cp env.local.example .env.local"
+  },
+  "dependencies": {
+    "@google/genai": "^1.23.0",
+    "ai": "^5.0.76",
+    "firebase": "^12.4.0",
+    "firebase-functions": "^6.5.0",
+    "firebase-tools": "^14.20.0",
+    "open": "^10.2.0",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "react-router-dom": "^7.9.4"
+  },
+  "devDependencies": {
+    "@types/node": "^22.14.0",
+    "@vitejs/plugin-react": "^5.0.0",
+    "typescript": "~5.8.2",
+    "vite": "^6.2.0"
+  }
+}

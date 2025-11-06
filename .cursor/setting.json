@@ -1,0 +1,13 @@
+{
+  "ai_model": "claude-3-5-sonnet",
+  "context_window": "full_project",
+  "auto_complete": true,
+  "cmd_k_mode": "claude_powered",
+  "rate_limits": "none",
+  "features": {
+    "chat": "unlimited",
+    "edits": "unlimited",
+    "explanations": "unlimited",
+    "debugging": "unlimited"
+  }
+}

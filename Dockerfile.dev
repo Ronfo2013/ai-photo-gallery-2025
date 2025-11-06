@@ -1,0 +1,38 @@
+# 🛠️ DOCKERFILE PER SVILUPPO
+# Container che simula Cloud Run ma con hot reload
+
+FROM node:22-slim
+
+WORKDIR /app
+
+# Installa curl per health checks e nodemon per hot reload
+RUN apt-get update && apt-get install -y curl && rm -rf /var/lib/apt/lists/*
+RUN npm install -g nodemon
+
+# Copia dipendenze server
+COPY server/package*.json ./
+RUN npm ci
+
+# Copia server files
+COPY server/server.js ./server.js
+COPY server/public ./public
+
+# Simula struttura Cloud Run (dist sarà montato come volume)
+RUN mkdir -p ./dist
+
+# Variabili ambiente identiche a Cloud Run
+ENV PORT=3000
+ENV NODE_ENV=development
+
+EXPOSE 3000
+
+# Usa nodemon per hot reload
+CMD ["nodemon", "--watch", "server.js", "--watch", "dist", "--watch", "public", "server.js"]
+
+
+
+
+
+
+
+

@@ -1,0 +1,20 @@
+# .gcloudignore per Cloud Run Deploy
+# Esclude solo file veramente non necessari
+
+# Git
+.git/
+.gitignore
+
+# File di ambiente locale (le variabili verranno passate come env vars)
+.env.local
+
+# Cache e build artifacts temporanei
+.vite/
+node_modules/
+
+# Documentazione
+*.md
+
+# File temporanei
+*.log
+.DS_Store

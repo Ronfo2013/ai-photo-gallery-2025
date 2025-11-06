@@ -1,0 +1,45 @@
+{
+  "// 🎯 ESTENSIONI RACCOMANDATE": "Per sviluppo ottimale AI Photo Gallery",
+  "recommendations": [
+    // Docker & Container Development
+    "ms-azuretools.vscode-docker",
+    "ms-vscode-remote.remote-containers",
+    
+    // Cloud Development
+    "googlecloudtools.cloudcode",
+    "ms-vscode.vscode-json",
+    
+    // Firebase
+    "toba.vsfire",
+    
+    // React/TypeScript
+    "bradlc.vscode-tailwindcss",
+    "esbenp.prettier-vscode",
+    "ms-vscode.vscode-typescript-next",
+    "formulahendry.auto-rename-tag",
+    
+    // Git & Deployment
+    "eamodio.gitlens",
+    "github.vscode-pull-request-github",
+    
+    // Productivity
+    "ms-vscode.live-server",
+    "christian-kohler.path-intellisense",
+    "humao.rest-client",
+    
+    // Debugging & Monitoring
+    "emilast.LogFileHighlighter"
+  ],
+  
+  "unwantedRecommendations": [
+    "ms-vscode.vscode-json"
+  ]
+}
+
+
+
+
+
+
+
+

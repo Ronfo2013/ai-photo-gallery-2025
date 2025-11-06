@@ -1,0 +1,5 @@
+{
+  "name": "AI Photo Gallery",
+  "description": "A mobile-first photo gallery application where users can view albums and photos. An admin panel allows uploading new photos, with an AI-powered feature to automatically generate descriptions for them using the Gemini API.",
+  "requestFramePermissions": []
+}
